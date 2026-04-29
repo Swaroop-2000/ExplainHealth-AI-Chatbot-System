@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/tf2_env/
+
+# Sensitive Files (CRITICAL: Do not push to GitHub!)
+backend/serviceAccountKey.json
+.env
+
+# Large Datasets and Images
+ODIR-5K/
+preprocessed_images/
+preprocessed_images_combined/
+full_df.csv
+
+# Large Machine Learning Models & Checkpoints
+*.h5
+*.keras
+checkpoints/
+backend/models/
+
+# Temporary and IDE Files
+tempCodeRunnerFile.*
+.vscode/
+.idea/
+backend/temp/
+backend/feedback/
+backend/__pycache__/
+*.pyc
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db

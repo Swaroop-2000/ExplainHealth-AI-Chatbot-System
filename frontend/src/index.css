@@ -1,0 +1,119 @@
+/* TAILWIND IMPORTS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material Symbols (Dashboard Icons) */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* ---------------------------------------- */
+/* LOGIN PAGE EXISTING STYLES (KEEP THEM)   */
+/* ---------------------------------------- */
+
+/* Glossy button + glass UI helpers */
+.glossy-btn {
+  @apply bg-blue-500 text-white rounded-xl px-6 py-3 font-semibold shadow-[0_0_18px_rgba(56,133,255,0.28)] hover:bg-blue-400 transition-all;
+}
+
+.glass-box {
+  @apply bg-white/5 backdrop-blur-xl rounded-2xl shadow-[0_0_35px_rgba(0,0,0,0.3)];
+}
+
+.input-glass {
+  @apply w-full bg-white/10 text-white px-4 py-3 rounded-lg outline-none border border-white/10 focus:border-blue-400 shadow-inner;
+}
+
+.role-btn-active {
+  @apply bg-blue-500 text-white shadow-[0_0_20px_rgba(56,133,255,0.35)];
+}
+
+.role-btn-inactive {
+  @apply text-gray-300 hover:bg-white/10 transition;
+}
+
+html,
+body {
+  background-color: #0d1726;
+  height: 100%;
+}
+
+.form-gloss {
+  position: relative;
+}
+
+.form-gloss::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 250px;
+  background: radial-gradient(circle at 50% 0%,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.02) 40%,
+      rgba(255, 255, 255, 0) 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------------------------------------- */
+/* DASHBOARD EXTRA GLOBALS (SAFE TO ADD)    */
+/* ---------------------------------------- */
+
+/* Allow full-page light background for dashboard */
+body.dashboard-light {
+  background-color: #f6f7f8;
+}
+
+/* Allow full-page dark background for dashboard */
+body.dashboard-dark {
+  background-color: #101922;
+}
+
+/* Make FullCalendar compact */
+.fc-toolbar-title {
+  font-size: 1rem !important;
+}
+
+.fc .fc-button {
+  padding: 2px 6px !important;
+  font-size: 0.75rem !important;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 4px !important;
+}
+
+.fc .fc-scrollgrid {
+  border-radius: 6px !important;
+}
+
+.fc .fc-daygrid-day-number {
+  font-size: 0.7rem !important;
+}
+
+
+/* Animation Utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
